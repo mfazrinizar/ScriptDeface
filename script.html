@@ -1,0 +1,135 @@
+ <html>
+</head>
+<title>[+]ISI JUDUL[+]</title>
+<body bgcolor=black
+<br/>
+<center><img src="https://isi_link_gambar.png" <br> </br> </head><center><img src=""
+</style>
+<script type="text/javascript">
+// Touched By : ISI NICK MU
+TypingText = function(element, interval, cursor, finishedCallback) {
+if((typeof document.getElementById == "undefined") || (typeof
+element.innerHTML == "undefined")) {
+this.running = true;
+return;
+}
+this.element = element;
+this.finishedCallback = (finishedCallback ? finishedCallback : function() {
+return; });
+this.interval = (typeof interval == "undefined" ? 100 : interval);
+this.origText = this.element.innerHTML;
+this.unparsedOrigText = this.origText;
+this.cursor = (cursor ? cursor : "");
+this.currentText = "";
+this.currentChar = 0;
+this.element.typingText = this;
+if(this.element.id == "") this.element.id = "typingtext" +
+TypingText.currentIndex++;
+TypingText.all.push(this);
+this.running = false;
+this.inTag = false;
+this.tagBuffer = "";
+this.inHTMLEntity = false;
+this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+if(this.running) return;
+if(typeof this.origText == "undefined") {
+setTimeout("document.getElementById('" + this.element.id +
+"').typingText.run()", this.interval);
+return;
+}
+if(this.currentText == "") this.element.innerHTML = "";
+if(this.currentChar < this.origText.length) {
+if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+this.tagBuffer = "<";
+this.inTag = true;
+this.currentChar++;
+this.run();
+return;
+} else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+this.tagBuffer += ">";
+this.inTag = false;
+this.currentText += this.tagBuffer;
+this.currentChar++;
+this.run();
+return;
+} else if(this.inTag) {
+this.tagBuffer += this.origText.charAt(this.currentChar);
+this.currentChar++;
+this.run();
+return;
+} else if(this.origText.charAt(this.currentChar) == "&" && !
+this.inHTMLEntity) {
+this.HTMLEntityBuffer = "&";
+this.inHTMLEntity = true;
+this.currentChar++;
+this.run();
+return;
+} else if(this.origText.charAt(this.currentChar) == ";" &&
+this.inHTMLEntity) {
+this.HTMLEntityBuffer += ";";
+this.inHTMLEntity = false;
+this.currentText += this.HTMLEntityBuffer;
+this.currentChar++;
+this.run();
+return;
+} else if(this.inHTMLEntity) {
+this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+this.currentChar++;
+this.run();
+return;
+} else {
+this.currentText += this.origText.charAt(this.currentChar);
+}
+this.element.innerHTML = this.currentText;
+this.element.innerHTML += (this.currentChar < this.origText.length - 1 ?
+(typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) :
+"");
+this.currentChar++;
+setTimeout("document.getElementById('" + this.element.id +
+"').typingText.run()", this.interval);
+} else {
+this.currentText = "";
+this.currentChar = 0;
+this.running = false;
+this.finishedCallback();
+}
+}
+</script>
+
+<!-- AdFender script begin --><script type='text/javascript' src='http://local.adfender.com/adfender/elemhide.js'></script><!-- AdFender script end -->
+<!-- AdFender script begin --><script type='text/javascript' src='http://local.adfender.com/adfender/elemhide.js'></script><!-- AdFender script end -->
+</head>
+<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;' ondragstart='return false' onselectstart='return false' style='-moz-user-select: none; cursor: default;'>
+<br/><br/>
+<div id="wrapper">
+<div class="box">
+<center></font><font color="white" size="10px">Touched
+<div id="console"><span class="prefix">
+<p id="message">
+</font><font color="white"> Hello <br>
+</font><font color="white"> <font color="Red" size="5px">DSFS</font> Was Here !!!<br>
+</font><font color="white"> ISI PESAN SINGKAT (AWALAN)<br>
+<br>
+<font color="red" size="5px">[+] Touched By : ISI NICK MU</font><br>
+<font color="white">[+] Message : ISI PESAN MU Say<br>
+<br>
+<font color="Red">[+] Greets : ISI ORANG YANG MAU KAMU CANTUMKAN
+<br>
+<font color="red">Copyright DSFS @2018<br>
+<script type="text/javascript">
+new TypingText(document.getElementById("message"), 50, function(i){ var ar
+= new Array("|", "|", "|", "|"); return " " + ar[i.length % ar.length]; });
+//Type out examples:
+TypingText.runAll();
+</script>
+<input text="test" id="commander" onkeyup="execute(this,event);" disabled="disabled" style="width:786px;"/>
+</div>
+<div class="spacer"></div>
+<iframe width="1" height="0" src="https://www.youtube.com/embed/ISI_KODE_MUSIK_DARI_YOUTUBE?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
